@@ -172,3 +172,48 @@ if (isset($_GET['id'])) {
         }
     </style>
 </head>
+
+<body>
+
+<header>
+    <h1>🌄 Website Informasi Wisata Lokal</h1>
+    <p>Menjelajahi Keindahan Alam dan Budaya Indonesia</p>
+</header>
+
+<main>
+<?php if ($detail): ?>
+    <!-- Halaman Detail -->
+    <div class="detail-card">
+        <img src="<?= $detail['gambar'] ?>" alt="<?= $detail['nama'] ?>">
+        <div class="content">
+            <h2><?= $detail['nama'] ?></h2>
+            <p><b>📍 Lokasi:</b> <?= $detail['lokasi'] ?></p>
+            <p><?= $detail['deskripsi'] ?></p>
+            <a href="wisata.php" class="back-btn">⬅ Kembali ke Daftar</a>
+        </div>
+    </div>
+
+<?php else: ?>
+    <!-- Daftar Wisata -->
+    <h2>🗺 Daftar Tempat Wisata</h2>
+    <div class="grid">
+        <?php foreach ($_SESSION['wisata'] as $i => $w): ?>
+            <div class="card">
+                <img src="<?= $w['gambar'] ?>" alt="<?= $w['nama'] ?>">
+                <div class="card-content">
+                    <h3><?= $w['nama'] ?></h3>
+                    <p><b>📍</b> <?= $w['lokasi'] ?></p>
+                    <a href="?id=<?= $i ?>" class="btn">Lihat Detail</a>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+</main>
+
+<footer>
+    <p>© 2025 Website Informasi Wisata Lokal | Kelompok Sistem Informasi</p>
+</footer>
+
+</body>
+</html>
