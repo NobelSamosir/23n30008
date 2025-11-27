@@ -57,7 +57,7 @@ if (isset($_GET['id'])) {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Website Informasi Wisata Lokal</title>
+    <title>Website Informasi Wisata Lokal Indonesia</title>
 
     <style>
         /* STYLE TETAP SAMA – tidak diubah */
