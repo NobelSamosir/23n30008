@@ -195,7 +195,7 @@ if (isset($_GET['id'])) {
 </main>
 
 <footer>
-    <p>© 2025 Website Informasi Wisata Lokal | Kelompok Sistem Informasi</p>
+    <p>© 2025 Website Informasi Wisata Lokal | MULTIPLE REMOTE</p>
 </footer>
 
 </body>
